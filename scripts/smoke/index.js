@@ -43,15 +43,16 @@ async function run() {
 	// TODO Skipped the docs-main test since it is failing at the moment.
 	// TODO Skipped the www test since it is failing at the moment.
 
-	console.log('🤖', 'Preparing', 'yarn');
+	console.log('🤖', 'Preparing', 'pnpm');
 
-	await execa('yarn', [], { cwd: fileURLToPath(rootDir), stdio: 'inherit' });
+	await execa('pnpm', ['install'], { cwd: fileURLToPath(rootDir), stdio: 'inherit' });
 
 	for (const directory of directories) {
 		console.log('🤖', 'Testing', directory.pathname.split('/').at(-1));
 
 		try {
-			await execa('yarn', ['run', 'build'], { cwd: fileURLToPath(directory), stdio: 'inherit' });
+			await execa('pnpm', ['install'], { cwd: fileURLToPath(rootDir), stdio: 'inherit' });
+			await execa('pnpm', ['run', 'build'], { cwd: fileURLToPath(directory), stdio: 'inherit' });
 		} catch (err) {
 			console.log(err);
 
@@ -65,7 +66,7 @@ async function run() {
 		}
 
 		try {
-			await execa('yarn', ['build', '--', '--experimental-static-build'], { cwd: fileURLToPath(directory), stdout: 'inherit', stderr: 'inherit' });
+			await execa('pnpm', ['run', 'build', '--', '--experimental-static-build'], { cwd: fileURLToPath(directory), stdout: 'inherit', stderr: 'inherit' });
 		} catch (err) {
 			console.log(err);
 
