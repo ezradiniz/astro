@@ -15,12 +15,12 @@
   "types": "./dist/types/@types/astro.d.ts",
   "exports": {
     ".": "./astro.js",
-    "./internal": "./internal.js",
     "./app/node": "./dist/core/app/node.js",
     "./client/*": "./dist/runtime/client/*",
     "./components": "./components/index.js",
     "./components/*": "./components/*",
     "./debug": "./components/Debug.astro",
+    "./internal": "./dist/runtime/server/index.js",
     "./internal/*": "./dist/runtime/server/*",
     "./package.json": "./package.json",
     "./runtime/*": "./dist/runtime/*",
