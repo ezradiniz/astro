@@ -137,10 +137,10 @@
     jsonpointer "^5.0.0"
     leven "^3.1.0"
 
-"@astrojs/compiler@^0.12.0-next.3":
-  version "0.12.0-next.3"
-  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.12.0-next.3.tgz#4040d81f903997f53156843f69a46f73da503f79"
-  integrity sha512-7GUQFFX6ErFzhs8sk/gvo/RognhVvP4mPKjL51vLHGWMqwctJUs0Fmz1VURDYxju7/L8+v/4Jql47eTKLvrqbg==
+"@astrojs/compiler@^0.12.0-next.4":
+  version "0.12.0-next.4"
+  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.12.0-next.4.tgz#32de8c5b44366af0ffa72e4bc4b548f1c45d8ffa"
+  integrity sha512-JbT3YOziGAp1L3bkPSGDCDAc513Xo7FNOR9vtwXlvGNaD/J1v8YlCP86eoGtiGnV+1HdYhx6898lkP7aOjULFQ==
   dependencies:
     typescript "^4.3.5"
 
